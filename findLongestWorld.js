@@ -36,13 +36,23 @@ console.log(findLongestWorld(sentence));
 //2
 const findLongestWorld2 = (sentence) => {
   const arr = sentence.split(" ");
-
-  arr.sort();
-  //   return word;
+  arr.sort((a, b) => a.length - b.length);
+  return arr[arr.length - 1];
 };
-console.log(findLongestWorld2(sentence));
+console.log("END", findLongestWorld2(sentence));
+
 const arr = [3, 4, 2, 1, 4, 5];
 console.log(arr.sort((a, b) => a - b));
 const arrStr = ["Azerbaycan", "Azerz", "Baba", "Basak"];
 
 console.log(arrStr.sort((a, b) => a.length - b.length));
+const findLongestWord3 = (str) => {
+  const lengthArr = str.split(" ").map((el) => el.length);
+  lengthArr.sort();
+  const findedEl = str
+    .split(" ")
+    .find((el) => el.length === lengthArr[lengthArr.length - 1]);
+  return findedEl;
+};
+
+console.log(findLongestWord3("I love Elmar"));

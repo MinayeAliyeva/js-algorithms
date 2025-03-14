@@ -1,4 +1,5 @@
 JavaScript-də String Metodları və Dövrlər
+
 1. String Metodları
 charAt(index) – Verilən indeksdəki simvolu qaytarır.
 let name = "Minaye";
