@@ -1,5 +1,20 @@
-// const sentence = "fun&!! tim....!e ...";
+const sentence2 = "fun&!! tim....!e ...";
 //keep empties and remove characters  after fint longest word  result:time
+
+const afterRemovedSpesificCharacters = sentence2.replaceAll(/[!&.]/g, "");
+const findLongestWordInSentence = afterRemovedSpesificCharacters.split(" ");
+//solution1
+const findLongestWord = (findLongestWordInSentence) => {
+  let word = "";
+  for (i = 0; i < findLongestWordInSentence.length; i++) {
+    if (findLongestWordInSentence[i].length > word.length) {
+      word = findLongestWordInSentence[i];
+    }
+  }
+  return word;
+};
+console.log("rest", findLongestWord(findLongestWordInSentence));
+//solition2
 
 const sentence = "I love Azerbaijan";
 //find the longest world in the sentence fun time
