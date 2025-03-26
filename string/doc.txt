@@ -1,3 +1,27 @@
+JavaScript-də stringlər hər zaman dəyişməz (immutable) olur, yəni bir dəfə yaradıldıqdan sonra dəyişdirilə bilməz.
+ Bu o deməkdir ki, string dəyişdikdə, əslində yeni bir string yaradılır və köhnə string dəyişməz qalır.
+ String yaratmanın bir neçə üsulu var:Double Quotes (" "), Backticks (Template literals) - ` `
+
+ String Yaranma Üsulları:
+Direct Initialization (Birbaşa təyin etmə):
+
+let text = "Hello, World!";
+
+String Constructor (String konstruktoru ilə):
+let text = new String("Hello, World!"); // Ancaq bu metod istifadə edilməməlidir, çünki obyekt yaradır.
+
+
+String Concatenation: İki və ya daha çox stringi birləşdirmək üçün + operatoru istifadə edilir.
+
+let greeting = "Salam";
+let name = "Artur";
+let message = greeting + " " + name; // "Salam Artur"
+
+
+String.fromCharCode(): Verilən kod nömrələrini istifadə edərək string yaradır.
+let str = String.fromCharCode(72, 101, 108, 108, 111); // "Hello"
+
+
 JavaScript-də String Metodları və Dövrlər
 
 1. String Metodları
