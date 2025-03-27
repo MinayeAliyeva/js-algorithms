@@ -6,6 +6,7 @@ const re = /ab+c/;
 
 Constructor üsulu: new RegExp(pattern)
 const re = new RegExp("ab+c");
+
 2. RegEx ilə String Metodları
 test() → Uyğunluq varsa true, yoxdursa false qaytarır.
 
