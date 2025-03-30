@@ -1,4 +1,4 @@
--də Array (massivlər) reference type verilənlərdir və bu, stringlərdən (primitive tip) fərqlidir
+Array (massivlər) reference type verilənlərdir və bu, stringlərdən (primitive tip) fərqlidir
 Array, -də reference type verilənlərdən biridir və bir neçə qiyməti eyni tipdə və ya fərqli tipdə saxlayan verilənlər strukturu kimi işləyir.
  Array-lər sıralı verilənlər toplusudur və onları indeklər vasitəsilə idarə edə bilərik.
  -də massivlər heap yaddaşında saxlanılır. Yəni massivlər bir reference (istinad) növü olduğu üçün onları yaddaşda saxladıqda, həmin massiv obyekt olaraq heap yaddaşında saxlanılır və massivə verilən istinad (reference) stack yaddaşında yerləşir.

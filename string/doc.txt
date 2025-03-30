@@ -1,8 +1,9 @@
 JavaScript-də stringlər hər zaman dəyişməz (immutable) olur, yəni bir dəfə yaradıldıqdan sonra dəyişdirilə bilməz.
+
  Bu o deməkdir ki, string dəyişdikdə, əslində yeni bir string yaradılır və köhnə string dəyişməz qalır.
  String yaratmanın bir neçə üsulu var:Double Quotes (" "), Backticks (Template literals) - ` `
 
- String Yaranma Üsulları:
+String Yaranma Üsulları:
 Direct Initialization (Birbaşa təyin etmə):
 
 let text = "Hello, World!";
@@ -75,8 +76,6 @@ console.log("JavaScript".slice(0, 4)); // "Java"
 substring(start, end) – slice kimi işləyir, ancaq mənfi indeks qəbul etmir.
 console.log("JavaScript".substring(0, 4)); // "Java"
 
-substr(start, length) – Verilmiş yerdən başlayaraq müəyyən sayda simvol qaytarır.
-console.log("JavaScript".substr(4, 6)); // "Script"
 
 repeat(n) – Mətni n dəfə təkrarlayır.
 console.log("Hi!".repeat(3)); // "Hi!Hi!Hi!"
@@ -88,10 +87,6 @@ padEnd(length, char) – String-in sonunu müəyyən simvolla doldurur.
 console.log("5".padEnd(3, "0")); // "500"
 
 concat(str1, str2, ...) – Verilmiş string-ləri birləşdirir.
-
-
-
-
 let str1 = "Hello";
 let str2 = "World";
 console.log(str1.concat(" ", str2)); // "Hello World"
@@ -99,10 +94,11 @@ console.log(str1.concat(" ", str2)); // "Hello World"
 match(regex) – Müəyyən bir regEx ifadəsi ilə uyğunluq axtarır və uyğunluqları array şəklində qaytarır.
 let text = "The rain in Spain stays mainly in the plain";
 console.log(text.match(/ain/g)); // ["ain", "ain", "ain"]
+console.log(text.match(/ain/)); // ["ain"]
 
 matchAll(regex) – Bütün uyğunluqları iterator kimi qaytarır.
 let text = "test1 test2 test3";
-let regex = /test(\d)/g;
+let regex = /test\d/g;
 let matches = text.matchAll(regex);
 for (let match of matches) {
     console.log(match[0]); // "test1", "test2", "test3"
@@ -113,7 +109,7 @@ let text = "Hello world!";
 console.log(text.search("world")); // 6
 
 localeCompare(str) – İki string-i müqayisə edərək mənfi, sıfır və ya müsbət dəyər qaytarır.
-console.log("apple".localeCompare("banana")); // -1 (çünki "apple" "banana"-dan əvvəl gəlir)
+console.log("apple".localeCompare("banana")); // -1 (çünki "apple" "banana"-dan əvvəl gəlir);
 
 normalize() – Unicode normalizasiyası üçün istifadə olunur (məsələn, aksentləri aradan qaldırmaq üçün).
 let text = "e\u0301"; // "é"
@@ -140,6 +136,7 @@ for...of dövrü – Ən sadə və oxunaqlı yanaşmadır.
 for (let char of "JavaScript") {
     console.log(char);
 }
+array- forEachde break ve continue isledilmiir !!!! 
 
 forEach() və map() metodları – Əgər string-də hərfləri dəyişmək və yeni massiv qaytarmaq istəyirsinizsə.
 "JavaScript".split("").forEach(char => console.log(char));
